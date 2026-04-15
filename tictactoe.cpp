@@ -39,7 +39,5 @@ int main() {
         // End turn and swap players.
         player = swap_players(player); 
     }
-
-
 }
 
