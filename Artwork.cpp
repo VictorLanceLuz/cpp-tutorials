@@ -8,6 +8,16 @@ Artwork::Artwork(std::string artTitle, std::string artistFullName, int artworkId
 {
 }
 
+Artwork::Artwork(const Artwork &other)
+    : title(other.title), artistName(other.artistName), id(other.id),
+    medium(other.medium), price(other.price), sold(other.sold)
+{
+}
+
+Artwork::Artwork(Artwork &&other)
+{
+}
+
 void Artwork::markAsSold()
 {
     sold = true;
