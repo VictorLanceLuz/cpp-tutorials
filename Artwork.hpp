@@ -10,6 +10,7 @@ public:
             std::string artworkMedium,
             double artworkPrice,
             bool soldStatus = false);
+    Artwork(const Artwork& other);
     
     void markAsSold();
 
