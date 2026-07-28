@@ -23,5 +23,19 @@ int main() {
     auctionTransfer.printDetails();
     starryNight.printDetails();
 
+    // new objects for gallery
+    Artwork theScream("The Scream", "Edvard Munch", 3, "tempera", 1500000);
+    Artwork digitalDream("Digital Dream", "Alice Doe", 4, "digital art", 5000);
+
+    Gallery gallery;
+    gallery.addArtwork(std::move(sunflowers));
+    gallery.addArtwork(std::move(theScream));
+    gallery.addArtwork(std::move(digitalDream));
+    gallery.displayGallery();
+
+    // Exhibition
+    Exhibition exhibition; 
+    
+
     return 0;
 }
