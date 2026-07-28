@@ -8,7 +8,25 @@ Artwork::Artwork(std::string artTitle, std::string artistFullName, int artworkId
 {
 }
 
+Artwork::Artwork(const Artwork &other)
+    : title(other.title), artistName(other.artistName), id(other.id),
+    medium(other.medium), price(other.price), sold(other.sold)
+{
+}
+
+Artwork::Artwork(Artwork &&other)
+    : title(std::move(other.title)), artistName(std::move(other.artistName)), id(other.id),
+    medium(std::move(other.medium)), price(other.price), sold(other.sold)
+{
+}
+
 void Artwork::markAsSold()
 {
     sold = true;
+}
+
+void Artwork::printDetails()
+{
+    std::cout << "ID: " << id << ", Title: " << title << ", Artist: " << artistName 
+    << ", Medium: " << medium << ", Price: " << price << std::endl;
 }

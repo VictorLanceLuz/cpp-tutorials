@@ -10,8 +10,10 @@ public:
             std::string artworkMedium,
             double artworkPrice,
             bool soldStatus = false);
-    
+    Artwork(const Artwork& other); // copy constructor
+    Artwork(Artwork&& other); // move constructor
     void markAsSold();
+    void printDetails();
 
     std::string title;
     std::string artistName;
