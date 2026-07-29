@@ -13,6 +13,5 @@ public:
 
     Gallery() = default; // default constructor. 
     Gallery(const Gallery&) = delete; // remove the parameter 'other' for conciseness.
-    
 
 };

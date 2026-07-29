@@ -34,8 +34,13 @@ int main() {
     gallery.displayGallery();
 
     // Exhibition
+    std::cout << "Exhibition activity" << std::endl;
     Exhibition exhibition; 
-    
+    exhibition.addToExhibition(&gallery.artworks[0]); // get 1st artwork.
+    exhibition.addToExhibition(&gallery.artworks[2]); // get 3rd artwork.
+    exhibition.showExhibition();
+    gallery.sellArtwork(4);
+    exhibition.showExhibition();
 
     return 0;
 }
