@@ -1,0 +1,15 @@
+#include "DeliveryRobot.hpp"
+
+DeliveryRobot::DeliveryRobot(const std::string& name, int initialBatteryLevel)
+    : Robot(name), batteryLevel(initialBatteryLevel) {}
+
+void DeliveryRobot::performTask() {
+    if (batteryLevel < 20) {
+        throw BatteryLowException("EXCEPTION: Battery Low");
+    } else {
+        std::cout << "DeliveryRobot is delivering" << std::endl;
+        batteryLevel -= 10;
+        std::cout << "Delivery done" << std::endl;
+    }
+}
+
